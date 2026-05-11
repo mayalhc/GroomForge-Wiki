@@ -154,6 +154,18 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
 ![Hair Card - UV Color Projection](assets/blender_1gVSgjeF4a.gif)  
 *Automatically places and aligns thousands of hair card UVs using a Color Guide Image.*
 
+💡 Professional Optimization Tip: Keep it Lightweight!
+
+To ensure the best performance, especially when dealing with massive datasets (e.g., 1,000,000+ strands), please follow these guidelines:
+Recommended Resolution: 256px to 512px.
+Why use low resolution?
+This tool analyzes spatial regions, not texture detail. Larger images (like 4K) only increase redundant pixel calculations without improving alignment precision.
+
+Using a 256px guide image significantly reduces memory overhead and accelerates processing time, allowing for near-instant UV snapping even with extreme strand counts.
+
+!!! note
+    Best Practice: Save your color guide as a low-res PNG to maximize workflow efficiency.
+    “Don't waste pixels on calculations. Lower resolution means faster results with zero data loss.”
 ### 8. Advanced Groom Export (The Core of Attribute Injection)
 Converts Blender curves into “True Groom” data that Unreal Engine understands instantly.
 
