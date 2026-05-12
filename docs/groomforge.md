@@ -151,7 +151,7 @@ Automates accessory generation and rigging using guide curves as the physical sk
 
 *🆕 Edge-Based Rigging: Automatically generates rig structures based on selected edges in Edit Mode for custom skeleton layouts.
 <video width="100%" controls>
-  <source src="./assets/edge_rig.mp4" type="video/mp4">
+  <source src="../assets/edge_rig.mp4" type="video/mp4">
 </video>
 
 
@@ -175,7 +175,7 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
  This ensures a seamless transition to Unreal's hair shaders with pre-configured data such as Flow maps, Gradient groups, and Occlusion variations.
 
 <video width="100%" controls preload="metadata">
-  <source src="./assets/card_re.mp4" type="video/mp4">
+  <source src="../assets/card_re.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 *Automatically places and aligns thousands of hair card UVs using a Color Guide Image.*
@@ -223,12 +223,12 @@ Converts Blender curves into “True Groom” data that Unreal Engine understand
     Quick binding based on proximity, ensuring stable results even in fast-paced animations.
 
 <video width="100%" controls>
-  <source src="./assets/Hair_bind1.mp4" type="video/mp4">
+  <source src="../assets/Hair_bind1.mp4" type="video/mp4">
 </video>
 
 
 <video width="100%" controls>
-  <source src="./assets/Hair_bind2.mp4" type="video/mp4">
+  <source src="../assets/Hair_bind2.mp4" type="video/mp4">
 </video>
 
 ---
