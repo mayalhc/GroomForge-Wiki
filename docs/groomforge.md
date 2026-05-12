@@ -73,6 +73,8 @@ Search for “GroomForge” and check the box to enable it.
 
 ![Install](assets/Install.gif)
 
+---
+
 ### 2. Root Align: One-Click Root Alignment
 Eliminates the tedious task of manually correcting thousands of curve directions and ensures attachment precision in Unreal.
 
@@ -81,6 +83,8 @@ Eliminates the tedious task of manually correcting thousands of curve directions
 
 ![Root Align](assets/blender_KqxPpDRfo2.gif)  
 *Even if the curve's start and end points are swapped, it automatically identifies the point closest to the target mesh (head) to reset the Root and correctly realigns the direction.*
+
+---
 
 ### 3. Guide Setting Tools & Fix Tool (Attribute Protection)
 Precisely defines and protects the Guide attributes required by the Unreal Groom system.
@@ -101,6 +105,8 @@ Precisely defines and protects the Guide attributes required by the Unreal Groom
 
 **💡 Pro Tip:** This feature works most intuitively when used in conjunction with the **HairBRIC** add-on.
 
+---
+
 ### 4. Guide Color View (Visual Inspection)
 Final visual verification of data configuration before export. (Guides: Red, Strands: Blue)
 
@@ -114,6 +120,8 @@ Final visual verification of data configuration before export. (Guides: Red, Str
     ⚠️ **Warning: Viewport vs. Actual Data**  
 Due to the nature of Blender's Geometry Nodes, the real-time Viewport display may differ from the actual Exported data. Use Color View for general distribution and flow checks, but always verify the final data within Unreal Engine.
 
+---
+
 ### 5. Guide Protection
 This panel provides tools to prevent unintended changes to your Guide data and to inspect the overall data integrity.
 
@@ -123,6 +131,8 @@ This panel provides tools to prevent unintended changes to your Guide data and t
 - **Hair Debug Info:** Displays the current data status of the hair curves.
 
 **💡 Pro Tip:** It is highly recommended to click **Fix Guide Count** after completing all guide setups and executing **Fix & Output Connect**.
+
+---
 
 ### 6. Hair Rig Prop Creator (Automated Rigging Pipeline)
 Automates accessory generation and rigging using guide curves as the physical skeleton.
@@ -139,6 +149,14 @@ Automates accessory generation and rigging using guide curves as the physical sk
 ![Rig Creator - Final Result](assets/RigCreator31.gif)  
 *Visual result of the automated rigging and bone system based on guide curves.*
 
+*🆕 Edge-Based Rigging: Automatically generates rig structures based on selected edges in Edit Mode for custom skeleton layouts.
+<video width="100%" controls>
+  <source src="assets/edge_rig.mp4" type="video/mp4">
+</video>
+
+
+---
+
 ### 7. Hair Card Engine (High-Speed Card Generation)
 A technical solution to complement the slow generation speeds of the Unreal MetaHuman Hair Card Generator.
 
@@ -151,7 +169,15 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
 ![Hair Card - LOD Stages](assets/HairCard2.gif)  
 *Generates hair cards in stages fully compatible with Unreal Engine's LOD system.*
 
-![Hair Card - UV Color Projection](assets/blender_1gVSgjeF4a.gif)  
+
+![Hair Card - Profile Curves](assets/card_att.png) 
+ Automatically generates UE-compatible attributes (UV Maps, Color Attributes, and Vertex Data) during hair card creation. 
+ This ensures a seamless transition to Unreal's hair shaders with pre-configured data such as Flow maps, Gradient groups, and Occlusion variations.
+
+<video width="100%" controls>
+  <source src="assets/card_re.mp4" type="video/mp4">
+</video>
+
 *Automatically places and aligns thousands of hair card UVs using a Color Guide Image.*
 
 💡 Professional Optimization Tip: Keep it Lightweight!
@@ -166,6 +192,8 @@ Using a 256px guide image significantly reduces memory overhead and accelerates 
 !!! note
     Best Practice: Save your color guide as a low-res PNG to maximize workflow efficiency.
     “Don't waste pixels on calculations. Lower resolution means faster results with zero data loss.”
+
+---
 ### 8. Advanced Groom Export (The Core of Attribute Injection)
 Converts Blender curves into “True Groom” data that Unreal Engine understands instantly.
 
@@ -180,6 +208,28 @@ Converts Blender curves into “True Groom” data that Unreal Engine understand
 **💎 Visual Verification: MetaHuman Shading Compatibility**  
 ![MetaHuman Root UV Demo](assets/MetaHuman-ezgif.com-video-to-gif-converter.gif)  
 *GroomForge's Root UV injection is 100% accurate, allowing real-time Ombre and Highlight adjustments directly within the MetaHuman Creator.*
+
+---
+## 9. Hair Curve-to-Mesh Binding (Animation Support)
+
+**Overcomes the technical limitation** in Blender where Hair Curves cannot be directly parented or bound to an Armature. This feature bridges the gap by binding curves to mesh data, ensuring hair follows complex character animations perfectly.
+
+### Key Highlights
+*   **✨ Perfect Sync**
+    Inherits mesh deformation to keep hair curves aligned with the body during motion.
+*   **🛠️ Technical Solution**
+    A custom-developed pipeline to enable professional rigging workflows for hair curves.
+*   **⚡ Efficient Workflow**
+    Quick binding based on proximity, ensuring stable results even in fast-paced animations.
+
+<video width="100%" controls>
+  <source src="assets/Hair_bind1.mp4" type="video/mp4">
+</video>
+
+
+<video width="100%" controls>
+  <source src="assets/Hair_bind2.mp4" type="video/mp4">
+</video>
 
 ---
 

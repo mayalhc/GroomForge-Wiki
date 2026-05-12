@@ -37,7 +37,6 @@ nav:
   - GroomForge Guide: 
       - "Welcome to GroomForge": index.md  # 상위 메뉴 클릭 시 바로 보일 파일
       - "Strategy & Pipeline": groomforge.md
-      - "Go to Wiggle2 RTX Wiki": wiggle.md
       # - "Workflow": workflow.md
       # - "Technical Manual": technical.md
       # - "Troubleshooting (FAQ)": faq.md
