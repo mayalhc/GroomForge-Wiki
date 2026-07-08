@@ -6,6 +6,7 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
 </div>
 
 ---
+## Update News
 
 ## 🚀 Version 1.4.0 Update
 
@@ -35,7 +36,7 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
 *   General performance improvement for the Wiggle Hair Sync bridge in scenes with many objects.
 
 ---
-## Update News
+
 ## 🚀 GroomForge PRO v1.3 Release Notes
 
 ### [Bug Fix] Fixed 'Fix & Output Connect' Automation and Clump ID Issues
