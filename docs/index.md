@@ -5,34 +5,6 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
   <iframe width="640" height="360" src="https://www.youtube.com/embed/GdUoXGK6g4E" title="[ Professional Hair Physics for Blender &amp; UE5 | Groomforge Addon Showcase ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-
----
-## Update News
-## 🚀 GroomForge PRO v1.3 Release Notes
-
-### [Bug Fix] Fixed 'Fix & Output Connect' Automation and Clump ID Issues
-* **Issue:** Previously, when using the 'Fix' function to automatically generate the node setup, the `clumpid` attribute failed to calculate or apply correctly to the strands.
-* **Fix:** Improved the internal logic of the `Fix & Output Connect` feature. The automatically generated `Store Named Attribute (clumpid)` node now properly fetches the `Random Value` data across the Spline domain and maintains a stable connection directly to the `Group Output`. Hair clumping effects will now display accurately per strand.
-![v1.3.0 Update node](assets/clumpid01.png)
----
-
-### 💡 Advanced Styling Tips & Use Cases
-
-#### Procedural Clumping via Voronoi Texture Masking
-For advanced styling, explore creative setups beyond the default node setup—such as layering multiple clump attributes for complex braids, realistic flyaways, or stylized layering.
-* **Procedural Clumping:** Instead of simple random values, try using a `Voronoi Texture` mapped to the strand positions to generate spatially clustered clump IDs.
-* **Realistic Clustering:** By passing the texture color through a `Separate Color` node and scaling it with a `Multiply` math node, you can procedurally group hair strands based on their physical proximity. This creates much more realistic, natural-looking hair clumps and partings.
-
-![v1.3.0 Update custom](assets/clumpid02.png)
----
-
-### 🎬 Showcase: Procedural Clumping in Action
-*Procedural Clumping via Voronoi Texture allows you to easily achieve realistic, engine-ready hair clustering.*
-* **Advanced Spatial Clustering:** By driving the `clumpid` attribute with a procedural `Voronoi Texture`, hair strands are automatically clustered based on their 3D proximity rather than simple random generation.
-* **Flawless Engine Integration:** As shown in the Unreal Engine viewport debug mode, each distinct color seamlessly visualizes a procedural clump unit. This data-driven approach yields incredibly natural hair breaks, realistic partings, and high-fidelity clumping behavior without any manual grooming overhead.
-* **Production-Ready Efficiency:** This setup bridges the gap between Blender's procedural generation and real-time engine shading, giving you complete pipeline control over complex hairstyles.
-![v1.3.0 Update UE5](assets/clumpid03.png)
-
 ---
 
 ## 🚀 Version 1.4.0 Update
@@ -61,6 +33,33 @@ For advanced styling, explore creative setups beyond the default node setup—su
 *   **Fixed:** Groom Export could fail unexpectedly in certain setups — export is now more robust and reliable.
 *   Cleaned up a couple of unused leftover buttons in the UV Color Packer panel for a tidier UI.
 *   General performance improvement for the Wiggle Hair Sync bridge in scenes with many objects.
+
+---
+## Update News
+## 🚀 GroomForge PRO v1.3 Release Notes
+
+### [Bug Fix] Fixed 'Fix & Output Connect' Automation and Clump ID Issues
+* **Issue:** Previously, when using the 'Fix' function to automatically generate the node setup, the `clumpid` attribute failed to calculate or apply correctly to the strands.
+* **Fix:** Improved the internal logic of the `Fix & Output Connect` feature. The automatically generated `Store Named Attribute (clumpid)` node now properly fetches the `Random Value` data across the Spline domain and maintains a stable connection directly to the `Group Output`. Hair clumping effects will now display accurately per strand.
+![v1.3.0 Update node](assets/clumpid01.png)
+---
+
+### 💡 Advanced Styling Tips & Use Cases
+
+#### Procedural Clumping via Voronoi Texture Masking
+For advanced styling, explore creative setups beyond the default node setup—such as layering multiple clump attributes for complex braids, realistic flyaways, or stylized layering.
+* **Procedural Clumping:** Instead of simple random values, try using a `Voronoi Texture` mapped to the strand positions to generate spatially clustered clump IDs.
+* **Realistic Clustering:** By passing the texture color through a `Separate Color` node and scaling it with a `Multiply` math node, you can procedurally group hair strands based on their physical proximity. This creates much more realistic, natural-looking hair clumps and partings.
+
+![v1.3.0 Update custom](assets/clumpid02.png)
+---
+
+### 🎬 Showcase: Procedural Clumping in Action
+*Procedural Clumping via Voronoi Texture allows you to easily achieve realistic, engine-ready hair clustering.*
+* **Advanced Spatial Clustering:** By driving the `clumpid` attribute with a procedural `Voronoi Texture`, hair strands are automatically clustered based on their 3D proximity rather than simple random generation.
+* **Flawless Engine Integration:** As shown in the Unreal Engine viewport debug mode, each distinct color seamlessly visualizes a procedural clump unit. This data-driven approach yields incredibly natural hair breaks, realistic partings, and high-fidelity clumping behavior without any manual grooming overhead.
+* **Production-Ready Efficiency:** This setup bridges the gap between Blender's procedural generation and real-time engine shading, giving you complete pipeline control over complex hairstyles.
+![v1.3.0 Update UE5](assets/clumpid03.png)
 
 ---
 
