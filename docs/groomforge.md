@@ -247,7 +247,7 @@ Skip the manual "export Alembic → switch to Unreal → import file" routine en
 Before using this feature for the first time, do the following inside Unreal Engine:
 
 1. Go to **Edit > Plugins**, search for **"Python Editor Script Plugin"**, and make sure it is **enabled**. If you just enabled it, restart Unreal Engine.
-2. Go to **Edit > Editor Preferences**, type **"Python"** into the search box, and check **"Enable Remote Execution"**.
+2. Go to **Edit > Editor Project Settings**, type PLUGINS **"Python"** into the search box, and check **"Enable Remote Execution"**.
 3. If you just checked this box, restart Unreal Engine so the connection can start listening.
 
 You only need to do this once per Unreal Engine project/installation.
