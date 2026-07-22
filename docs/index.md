@@ -8,6 +8,23 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
 ---
 ## Update News
 
+## 🚀 Version 1.5.0 Update
+
+### New Features & Improvements
+*   **🆕 Pre-Computed Guide Weights (Experimental)**  
+    A brand-new, independent export option that lets Unreal Engine reproduce Blender's own guide-to-strand interpolation instead of recalculating its own. When enabled, GroomForge computes each strand's 3 closest guides and their blend weights in Blender and bundles that data into the Alembic file.
+    - Completely separate from the existing **Guide** checkbox — this is an extra option, not a replacement for it. Leave it off if you just want the standard Guide/Strand export.
+    - **Off by default.** Turn it on from its own **"Advanced (Experimental)"** box in the Groom Export panel.
+    - Only strands with a guide within the **Guide Influence Radius** get simulation weight — hair with no nearby guide stays still instead of being incorrectly pulled toward a distant, unrelated guide. This also means you can control exactly which region of hair simulates simply by choosing where you place guides.
+    - Two new sliders appear when enabled:
+      - **Target Segment Length** (default `0.2`) — curves are resampled so each has roughly this segment length, instead of one fixed point count for every strand. Short strands automatically get fewer points, long strands get more.
+      - **Guide Influence Radius** (default `0.002`) — the maximum distance a guide can be from a strand root to influence it. Match this to your rig's scale (the default is tuned for MetaHuman-scale rigs, where the character armature is scaled to `0.01`). If too many strands end up with no simulation movement at all, raise this value.
+
+### Bug Fixes
+*   **Fixed:** Guide Influence Radius default was tuned for meter-scale rigs, causing nearly all strands to fall outside the radius (and lose simulation weight) on Unreal/MetaHuman-scale (centimeter) rigs. Default lowered to match that scale.
+
+---
+
 ## 🚀 Version 1.4.0 Update
 
 ### New Features & Improvements
@@ -19,10 +36,7 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
     - After the first successful send, repeated sends to the same UE session are much faster, since GroomForge remembers the connection for the rest of your Blender session.
 
 *   **🆕 Smarter, More Natural Clump Grouping**  
-    The auto-generated “clumpid” attribute (created by **Fix & Output Connect**) now groups strands by their actual 3D position instead of just their internal list order, so strands that are physically close together now share the same clump ID — giving a much more natural, bundled look. A new **Clump Scale** slider next to the **Fix & Output Connect** button lets you control how large or small the clumps are.
-
-*   **🆕 Richer Unreal Groom Data on Export**  
-    Groom Export now includes extra guide-interpolation data (`groom_closest_guides` / `groom_guide_weights`) and standard Groom version info, giving Unreal Engine more information to interpolate your strands from the guides more accurately.
+    The auto-generated “clumpid” attribute (created by **Fix & Output Connect**) now groups strands by their actual 3D position (via a Voronoi pattern) instead of just their internal list order, so strands that are physically close together now share the same clump ID — giving a much more natural, bundled look. A new **Clump Scale** slider next to the **Fix & Output Connect** button lets you control how large or small the clumps are.
 
 *   **🆕 Force UE Scale Option**  
     A new **Force UE Scale (100x)** checkbox in Hair Rig Prop Creator lets you manually force the correct scale compensation for Unreal-style (centimeter) armatures, in case it isn't detected automatically.
@@ -32,6 +46,7 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
 *   **Fixed:** Generated hair meshes/tubes could come out **100x too large** when targeting an Unreal-scaled (centimeter) Armature.
 *   **Fixed:** The auto-generated “roughness” attribute could end up as a single identical value across the whole hair system instead of varying naturally per strand.
 *   **Fixed:** Groom Export could fail unexpectedly in certain setups — export is now more robust and reliable.
+*   **Fixed:** Strand IDs (`groom_id`) could collide with each other when exporting multiple hair objects together, which could cause inconsistent results.
 *   Cleaned up a couple of unused leftover buttons in the UV Color Packer panel for a tidier UI.
 *   General performance improvement for the Wiggle Hair Sync bridge in scenes with many objects.
 

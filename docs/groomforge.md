@@ -4,14 +4,14 @@
 
 
 
-# 🛠️ GroomForge v1.4.0 Official Wiki: Blender to Unreal Engine 5.x
+# 🛠️ GroomForge v1.5.0 Official Wiki: Blender to Unreal Engine 5.x
 ---
 
 ## Strategy & Pipeline Overview
 
 🎯 **Advanced Pipeline Solution for Professional Grooming**
 
-GroomForge v1.4.0 is a professional pipeline add-on designed to convert and export Blender Hair Curves into assets optimized for the Unreal Engine 5.x Groom system and 5.7 Hair Dataflow. It implements high-end features—previously exclusive to tools like Maya XGen or Houdini—directly within the Blender environment, providing precise guide control and attribute injection.
+GroomForge v1.5.0 is a professional pipeline add-on designed to convert and export Blender Hair Curves into assets optimized for the Unreal Engine 5.x Groom system and 5.7 Hair Dataflow. It implements high-end features—previously exclusive to tools like Maya XGen or Houdini—directly within the Blender environment, providing precise guide control and attribute injection.
 
 ![Unlocking High-End Rendering Attributes (v1.1.0 Update)](assets/image.png)  
 *Unlocking High-End Rendering Attributes (v1.1.0 Update)*
@@ -215,6 +215,23 @@ Converts Blender curves into “True Groom” data that Unreal Engine understand
 *GroomForge's Root UV injection is 100% accurate, allowing real-time Ombre and Highlight adjustments directly within the MetaHuman Creator.*
 
 ---
+
+### 🆕 8.1 Pre-Computed Guide Weights (Experimental)
+
+An independent, off-by-default export option that lets Unreal Engine reproduce Blender's own guide-to-strand interpolation, instead of Unreal recalculating its own from scratch.
+
+- Found in its own **"Advanced (Experimental)"** box in the Groom Export panel — separate from the regular **Guide** checkbox above it. If you don't want this feature, simply leave it unchecked (or uncheck **Guide** on export) and export normally.
+- When enabled, two sliders appear:
+  - **Target Segment Length** — curves are resampled so each has roughly this segment length instead of a single fixed point count for every strand, so short strands don't get over-subdivided and long strands don't get under-subdivided. Default `0.2`.
+  - **Guide Influence Radius** — the maximum distance a guide can be from a strand root to influence it. Strands with no guide within this radius get **no simulation weight** instead of being incorrectly forced onto a distant, unrelated guide. Default `0.002`, tuned for MetaHuman-scale (centimeter, `0.01` scale) rigs — if you're working at a different scale, adjust this to match your rig.
+
+!!! tip
+    💡 **Guide placement controls what simulates.** Because out-of-range strands get zero simulation weight, you can decide exactly which region of hair moves in Unreal's simulation simply by choosing where you place your guides — no need to simulate the entire head if only a fringe or ponytail needs it.
+
+!!! warning
+    ⚠️ This is an **Experimental** feature. It is completely independent of the standard Guide/Strand export — enabling it does not change how the regular **Guide** checkbox behaves.
+
+---
 ## 9. Hair Curve-to-Mesh Binding (Animation Support)
 
 **Overcomes the technical limitation** in Blender where Hair Curves cannot be directly parented or bound to an Armature. This feature bridges the gap by binding curves to mesh data, ensuring hair follows complex character animations perfectly.
@@ -300,7 +317,7 @@ Blender Hair Styling → 2. Assign Target Mesh → 3. Root Align → 4. Guide Se
 
 ## Summary
 
-> **GroomForge v1.4.0 is a professional pipeline solution that perfectly optimizes Blender grooming data to match Unreal Engine 5.x standard Groom systems and injects the necessary attributes for high-end results.**
+> **GroomForge v1.5.0 is a professional pipeline solution that perfectly optimizes Blender grooming data to match Unreal Engine 5.x standard Groom systems and injects the necessary attributes for high-end results.**
 
 ---
 
