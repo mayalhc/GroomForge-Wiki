@@ -8,6 +8,23 @@ For full documentation visit [superhivemarket.com](https://superhivemarket.com/p
 ---
 ## Update News
 
+## 🚀 Version 1.5.1 Update
+
+### Now a Blender Extension
+GroomForge PRO is now packaged as a proper **Blender Extension** (Blender 4.2 and newer), instead of a legacy add-on.
+
+*   **Simpler install:** Just drag the `.zip` into Blender, or use **Edit > Preferences > Get Extensions > Install from Disk**. GroomForge now appears under the **Extensions** tab rather than the Add-ons tab.
+*   **Clear, up-front permissions:** Blender now tells you exactly what GroomForge uses before you install it — file access (for exporting Alembic groom files and reading UV color guide images) and network access (only to reach an Unreal Engine editor running on your own computer).
+*   **Cleaner updates:** Version info now comes from the extension itself, so updating is handled by Blender's own extension system.
+
+!!! note
+    If you previously installed GroomForge PRO as a regular add-on, please **remove the old version first** (Edit > Preferences > Add-ons), then install the new Extension. Running both at the same time will cause conflicts.
+
+### Bug Fixes
+*   **Fixed:** Blender could report a policy warning for GroomForge PRO on startup. GroomForge's bundled Alembic library is now loaded in a fully self-contained way, so it no longer leaves anything behind that could conflict with other add-ons that bundle their own copy of Alembic.
+
+---
+
 ## 🚀 Version 1.5.0 Update
 
 ### New Features & Improvements
