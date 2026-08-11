@@ -1,120 +1,324 @@
-# Welcome to GroomForge
+<!-- !!! note (파란색/정보)!!! tip (초록색/팁)!!! warning (주황색/경고)!!! failure (빨간색/에러)!!! bug (분홍색/버그) 
+반드시 문구는 스페이스바 4칸 -->
 
-For full documentation visit [superhivemarket.com](https://superhivemarket.com/products/groomforge).
-<div align="center">
-  <iframe width="640" height="360" src="https://www.youtube.com/embed/GdUoXGK6g4E" title="[ Professional Hair Physics for Blender &amp; UE5 | Groomforge Addon Showcase ]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+
+
+
+# 🛠️ GroomForge v1.5.0 Official Wiki: Blender to Unreal Engine 5.x
+---
+
+## Strategy & Pipeline Overview
+
+🎯 **Advanced Pipeline Solution for Professional Grooming**
+
+GroomForge v1.5.0 is a professional pipeline add-on designed to convert and export Blender Hair Curves into assets optimized for the Unreal Engine 5.x Groom system and 5.7 Hair Dataflow. It implements high-end features—previously exclusive to tools like Maya XGen or Houdini—directly within the Blender environment, providing precise guide control and attribute injection.
+
+![Unlocking High-End Rendering Attributes (v1.1.0 Update)](assets/image.png)  
+*Unlocking High-End Rendering Attributes (v1.1.0 Update)*
+
+![Unreal Engine MetaHuman Base Template Groom Asset](assets/image%201.png)  
+*Unreal Engine MetaHuman Base Template Groom Asset*
+
+![Groom Asset created and imported via GroomForge v1.4.0](assets/image%202.png)  
+*Groom Asset created and imported via GroomForge v1.4.0*
+
+### 1. Key Overview
+- **Precise Data Conversion:** Fully distinguishes and controls Guide (Value: 1) and Strand (Value: 0) attributes as recognized by Unreal Engine.
+- **Root Alignment:** Automatically aligns thousands of hair curve roots to the target mesh (scalp) normals to ensure simulation stability.
+- **Automated Rigging Pipeline:** Automates everything from hair accessory generation to bone rigging based on guide curves.
+- **MetaHuman Compatible Hair Card Engine:** Generates cards faster than the in-engine generator, supporting length-based packing and color-guide UV placement.
+- **UE Optimized Export:** Automatically injects essential professional attributes for engine rendering, including Root UV, ClumpID, and Occlusion.
+- **🆕 Send to Unreal Engine:** One click sends your hair straight into a running Unreal Engine Editor as a finished Groom asset — no manual file export/import needed.
+- **🆕 Natural, Position-Based Clumping:** Clump IDs are now generated from each strand's real 3D position, so strands that are physically close together are grouped together for a more believable, bundled look.
+
+### 2. Prerequisites & Requirements
+- **Installation:** `Edit > Preferences > Add-ons > Install` → Select `GroomForge.zip` and enable.
+- **Recommended Environment:** Blender 4.x / 5.x, Unreal Engine 5.x (5.7 recommended for latest features).
+- **Required Data:** Blender Hair Curves (Native or 3rd-party add-ons), Target Mesh (Character Head Mesh).
+
+!!! warning
+    ⚠️ **Important:** GroomForge v1.4.0 is **not** a hair creation tool.  
+It is a pipeline add-on designed to **organize, guide-ize, rig, set attributes, and export** existing hair curves for Unreal Engine 5.x.
+
+### 🚀 Cross-Platform Performance Innovation
+GroomForge breaks the boundaries of platforms, engineered to provide peak performance across both Windows and Mac (M1/M2/M3) environments. It ensures engine-level stability even when handling massive grooming datasets.
+
+- **Unmatched Speed:** Achieved **1.4x faster processing speed** on Mac compared to Blender's native features. (Based on 1M Strands)
+- **Massive Data Scalability:** Proven stability in processing up to **10 million strands (10M Strands)**.
+- **Perfect Precision:** Recorded a **Precision Diff of 0.0000000000** on all platforms, guaranteeing absolute data integrity.
+
+![Benchmark conducted on AMD64 / arm64 architectures with Blender 4.5.8 LTS](assets/image%203.png)  
+*Benchmark conducted on AMD64 / arm64 architectures with Blender 4.5.8 LTS*
 
 ---
-## Update News
 
-## 🚀 Version 1.5.1 Update
+## Workflow
 
-### Now a Blender Extension
-GroomForge PRO is now packaged as a proper **Blender Extension** (Blender 4.2 and newer), instead of a legacy add-on.
+1. **Prepare Hair Curves** — Complete styling and apply scale (`Ctrl+A`).
+2. **Assign Target Mesh** — Prepare the head mesh where the hair will be attached.
+3. **Run Root Align** — Precisely align curve roots based on the target mesh.
+4. **Use Guide Setting Tools** — Assign guides and automate node setup via **Fix & Output Connect**.
+5. **Verify Guide Color View** — Visually inspect the guide and strand configuration.
+6. **(Optional) Create Hair Rig Prop** — Generate guide-based accessories and automated rigging.
+7. **(Optional) Utilize Hair Card Engine** — Create UE-compatible high-speed hair cards and UV layouts.
+8. **Run Advanced Groom Export** — Inject final rendering attributes via **Add Missing Attributes** and export Alembic.
+9. **Apply in Unreal Engine 5.x** — Import and verify the Groom asset (integrate with 5.7 Dataflow if necessary).
 
-*   **Simpler install:** Just drag the `.zip` into Blender, or use **Edit > Preferences > Get Extensions > Install from Disk**. GroomForge now appears under the **Extensions** tab rather than the Add-ons tab.
-*   **Clear, up-front permissions:** Blender now tells you exactly what GroomForge uses before you install it — file access (for exporting Alembic groom files and reading UV color guide images) and network access (only to reach an Unreal Engine editor running on your own computer).
-*   **Cleaner updates:** Version info now comes from the extension itself, so updating is handled by Blender's own extension system.
+---
+
+## Technical Manual & Features
+
+### 1. How to Install GroomForge
+Go to **Edit > Preferences** in the top menu.  
+Select the **Add-ons** tab → click **Install...** → select `GroomForge.zip` → click **Install Add-on**.  
+Search for “GroomForge” and check the box to enable it.
+
+![Install](assets/Install.gif)
+
+---
+
+### 2. Root Align: One-Click Root Alignment
+Eliminates the tedious task of manually correcting thousands of curve directions and ensures attachment precision in Unreal.
+
+- **How to use:** Select Hair Curves → Pick Target Mesh → Click **Root Align**.
+- **Precision:** Automatically identifies the point closest to the mesh and sets it as the Root, preventing simulation errors where hair floats or roots and tips are swapped.
+
+![Root Align](assets/blender_KqxPpDRfo2.gif)  
+*Even if the curve's start and end points are swapped, it automatically identifies the point closest to the target mesh (head) to reset the Root and correctly realigns the direction.*
+
+---
+
+### 3. Guide Setting Tools & Fix Tool (Attribute Protection)
+Precisely defines and protects the Guide attributes required by the Unreal Groom system.
+
+- **Guide 1 / 0:** Manually assign/unassign selected curves as Guides.
+- **Select 1 / 0:** Quickly select or invert selection of current Guides.
+- **Random Guide:** Convert a specific percentage of hair into guides randomly.
+
+![Guide Setting Tools](assets/blender_RPCN1OPj8f.gif)
+
+**🆕 Fix & Output Connect:** Automatically builds the necessary node structure to prevent Guide attributes from “bleeding” into strands within Geometry Nodes.
+
+![Fix with Add-ons](assets/blender_09rVWBzNOp.gif)  
+*When using Blender Hair Add-ons (e.g., HairBRIC, Hair Tool)*
+
+![Fix with Native Nodes](assets/blender_UA91lgEH3p.gif)  
+**When using Native Blender Hair Nodes (Geometry Nodes)**
+
+**💡 Pro Tip:** This feature works most intuitively when used in conjunction with the **HairBRIC** add-on.
+
+**🆕 Clump Scale:** Right next to the **Fix & Output Connect** button you'll find a **Clump Scale** slider. This controls how large or small the automatically generated hair clumps are — a lower value creates bigger, chunkier clumps, while a higher value creates smaller, finer clumps. Adjust it and re-run **Fix & Output Connect** to see the difference. Clumps are now based on each strand's real position in 3D space, so nearby strands naturally group together instead of being grouped randomly.
+
+---
+
+### 4. Guide Color View (Visual Inspection)
+Final visual verification of data configuration before export. (Guides: Red, Strands: Blue)
+
+![Guide Color View - Add-ons](assets/blender_E8bZe81J2u.gif)  
+**When using Blender Hair Add-ons (e.g., HairBRIC, Hair Tool)**
+
+![Guide Color View - Native](assets/blender_r25UoaBtZz.gif)  
+**When using Native Blender Hair Nodes (Geometry Nodes)**
+
+!!! warning
+    ⚠️ **Warning: Viewport vs. Actual Data**  
+Due to the nature of Blender's Geometry Nodes, the real-time Viewport display may differ from the actual Exported data. Use Color View for general distribution and flow checks, but always verify the final data within Unreal Engine.
+
+---
+
+### 5. Guide Protection
+This panel provides tools to prevent unintended changes to your Guide data and to inspect the overall data integrity.
+
+![Guide Protection Panel](assets/image%204.png)
+
+- **Fix Guide Count:** Locks the number of currently set Guides.
+- **Hair Debug Info:** Displays the current data status of the hair curves.
+
+**💡 Pro Tip:** It is highly recommended to click **Fix Guide Count** after completing all guide setups and executing **Fix & Output Connect**.
+
+---
+
+### 6. Hair Rig Prop Creator (Automated Rigging Pipeline)
+Automates accessory generation and rigging using guide curves as the physical skeleton.
+
+- **🆕 Target Bone Selection:** Allows direct selection of a specific Bone within the armature.
+- **🆕 Random Scale:** Randomizes the size of instances for natural visual variation.
+- **🆕 Force UE Scale (100x):** GroomForge automatically detects when your Target Armature uses Unreal-style centimeter scale and compensates for it. If for any reason it isn't detected correctly, check this box to force the correct scale manually.
+
+![Rig Creator - Single Mesh](assets/RigCreator1.gif)  
+*Precisely places a single, user-selected mesh along the guide curves.*
+
+![Rig Creator - Collection Scatter](assets/RigCreator2.gif)  
+*Automatically scatters multiple meshes from a Collection with randomized spacing and scale.*
+
+![Rig Creator - Final Result](assets/RigCreator31.gif)  
+*Visual result of the automated rigging and bone system based on guide curves.*
+
+*🆕 Edge-Based Rigging: Automatically generates rig structures based on selected edges in Edit Mode for custom skeleton layouts.
+<video width="100%" controls>
+  <source src="../assets/edge_rig.mp4" type="video/mp4">
+</video>
+
+
+---
+
+### 7. Hair Card Engine (High-Speed Card Generation)
+A technical solution to complement the slow generation speeds of the Unreal MetaHuman Hair Card Generator.
+
+- **LOD Compatibility:** Specifically designed to sync perfectly with MetaHuman’s LOD system.
+- **UV Color Projection:** Automatically maps card UVs using color-separated data from UE-generated maps.
+
+![Hair Card - Profile Curves](assets/blender_aukuA3DJxk.gif)  
+*Instant hair card generation based on Profile Curves or Base Curves.*
+
+![Hair Card - LOD Stages](assets/HairCard2.gif)  
+*Generates hair cards in stages fully compatible with Unreal Engine's LOD system.*
+
+
+![Hair Card - Profile Curves](assets/card_att.png) 
+ Automatically generates UE-compatible attributes (UV Maps, Color Attributes, and Vertex Data) during hair card creation. 
+ This ensures a seamless transition to Unreal's hair shaders with pre-configured data such as Flow maps, Gradient groups, and Occlusion variations.
+
+<video width="100%" controls preload="metadata">
+  <source src="../assets/card_re.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+*Automatically places and aligns thousands of hair card UVs using a Color Guide Image.*
+
+💡 Professional Optimization Tip: Keep it Lightweight!
+
+To ensure the best performance, especially when dealing with massive datasets (e.g., 1,000,000+ strands), please follow these guidelines:
+Recommended Resolution: 256px to 512px.
+Why use low resolution?
+This tool analyzes spatial regions, not texture detail. Larger images (like 4K) only increase redundant pixel calculations without improving alignment precision.
+
+Using a 256px guide image significantly reduces memory overhead and accelerates processing time, allowing for near-instant UV snapping even with extreme strand counts.
 
 !!! note
-    If you previously installed GroomForge PRO as a regular add-on, please **remove the old version first** (Edit > Preferences > Add-ons), then install the new Extension. Running both at the same time will cause conflicts.
+    Best Practice: Save your color guide as a low-res PNG to maximize workflow efficiency.
+    “Don't waste pixels on calculations. Lower resolution means faster results with zero data loss.”
 
-### Bug Fixes
-*   **Fixed:** Blender could report a policy warning for GroomForge PRO on startup. GroomForge's bundled Alembic library is now loaded in a fully self-contained way, so it no longer leaves anything behind that could conflict with other add-ons that bundle their own copy of Alembic.
+---
+### 8. Advanced Groom Export (The Core of Attribute Injection)
+Converts Blender curves into “True Groom” data that Unreal Engine understands instantly.
+
+- **🆕 Add Missing Attributes:** A single click generates and injects all essential rendering attribute nodes: **ClumpID, Occlusion, Roughness, and Root UV**.
+
+![Advanced Export](assets/blender_OTIdvEWgkU.gif)  
+*Select one or multiple hair curves to export them into a single Alembic file.*
+
+![More Attributes, Better Visuals](assets/UE_Import_all.png)  
+**More Attributes, Better Visuals**
+
+**💎 Visual Verification: MetaHuman Shading Compatibility**  
+![MetaHuman Root UV Demo](assets/MetaHuman-ezgif.com-video-to-gif-converter.gif)  
+*GroomForge's Root UV injection is 100% accurate, allowing real-time Ombre and Highlight adjustments directly within the MetaHuman Creator.*
 
 ---
 
-## 🚀 Version 1.5.0 Update
+### 🆕 8.1 Pre-Computed Guide Weights (Experimental)
 
-### New Features & Improvements
-*   **🆕 Pre-Computed Guide Weights (Experimental)**  
-    A brand-new, independent export option that lets Unreal Engine reproduce Blender's own guide-to-strand interpolation instead of recalculating its own. When enabled, GroomForge computes each strand's 3 closest guides and their blend weights in Blender and bundles that data into the Alembic file.
-    - Completely separate from the existing **Guide** checkbox — this is an extra option, not a replacement for it. Leave it off if you just want the standard Guide/Strand export.
-    - **Off by default.** Turn it on from its own **"Advanced (Experimental)"** box in the Groom Export panel.
-    - Only strands with a guide within the **Guide Influence Radius** get simulation weight — hair with no nearby guide stays still instead of being incorrectly pulled toward a distant, unrelated guide. This also means you can control exactly which region of hair simulates simply by choosing where you place guides.
-    - Two new sliders appear when enabled:
-      - **Target Segment Length** (default `0.2`) — curves are resampled so each has roughly this segment length, instead of one fixed point count for every strand. Short strands automatically get fewer points, long strands get more.
-      - **Guide Influence Radius** (default `0.002`) — the maximum distance a guide can be from a strand root to influence it. Match this to your rig's scale (the default is tuned for MetaHuman-scale rigs, where the character armature is scaled to `0.01`). If too many strands end up with no simulation movement at all, raise this value.
+An independent, off-by-default export option that lets Unreal Engine reproduce Blender's own guide-to-strand interpolation, instead of Unreal recalculating its own from scratch.
 
-### Bug Fixes
-*   **Fixed:** Guide Influence Radius default was tuned for meter-scale rigs, causing nearly all strands to fall outside the radius (and lose simulation weight) on Unreal/MetaHuman-scale (centimeter) rigs. Default lowered to match that scale.
+- Found in its own **"Advanced (Experimental)"** box in the Groom Export panel — separate from the regular **Guide** checkbox above it. If you don't want this feature, simply leave it unchecked (or uncheck **Guide** on export) and export normally.
+- When enabled, two sliders appear:
+  - **Target Segment Length** — curves are resampled so each has roughly this segment length instead of a single fixed point count for every strand, so short strands don't get over-subdivided and long strands don't get under-subdivided. Default `0.2`.
+  - **Guide Influence Radius** — the maximum distance a guide can be from a strand root to influence it. Strands with no guide within this radius get **no simulation weight** instead of being incorrectly forced onto a distant, unrelated guide. Default `0.002`, tuned for MetaHuman-scale (centimeter, `0.01` scale) rigs — if you're working at a different scale, adjust this to match your rig.
+
+!!! tip
+    💡 **Guide placement controls what simulates.** Because out-of-range strands get zero simulation weight, you can decide exactly which region of hair moves in Unreal's simulation simply by choosing where you place your guides — no need to simulate the entire head if only a fringe or ponytail needs it.
+
+!!! warning
+    ⚠️ This is an **Experimental** feature. It is completely independent of the standard Guide/Strand export — enabling it does not change how the regular **Guide** checkbox behaves.
+
+---
+## 9. Hair Curve-to-Mesh Binding (Animation Support)
+
+**Overcomes the technical limitation** in Blender where Hair Curves cannot be directly parented or bound to an Armature. This feature bridges the gap by binding curves to mesh data, ensuring hair follows complex character animations perfectly.
+
+### Key Highlights
+*   **✨ Perfect Sync**
+    Inherits mesh deformation to keep hair curves aligned with the body during motion.
+*   **🛠️ Technical Solution**
+    A custom-developed pipeline to enable professional rigging workflows for hair curves.
+*   **⚡ Efficient Workflow**
+    Quick binding based on proximity, ensuring stable results even in fast-paced animations.
+
+<video width="100%" controls>
+  <source src="../assets/Hair_bind1.mp4" type="video/mp4">
+</video>
+
+
+<video width="100%" controls>
+  <source src="../assets/Hair_bind2.mp4" type="video/mp4">
+</video>
 
 ---
 
-## 🚀 Version 1.4.0 Update
+## 🆕 10. Send to Unreal Engine (Beta)
 
-### New Features & Improvements
-*   **🆕 Send to Unreal Engine (Beta)**  
-    A brand-new one-click bridge between Blender and a running Unreal Engine Editor. Instead of manually exporting an Alembic file and importing it in UE by hand, just click **Send to Unreal Engine** — GroomForge exports your hair and automatically creates the Groom asset inside UE for you, no file dialogs or manual import steps required.
-    - Works when Blender and Unreal Engine are running on the **same computer**.
-    - Requires a one-time setup in UE: enable the **Python Editor Script Plugin** and turn on **Enable Remote Execution** in Editor Preferences (see the User Guide for the exact steps).
-    - You can choose the **UE Folder** and **Asset Name** directly from the Blender panel, so the imported Groom asset lands exactly where — and named however — you want.
-    - After the first successful send, repeated sends to the same UE session are much faster, since GroomForge remembers the connection for the rest of your Blender session.
+Skip the manual "export Alembic → switch to Unreal → import file" routine entirely. **Send to Unreal Engine** exports your hair and creates the finished Groom asset inside a running Unreal Engine Editor for you, in a single click.
 
-*   **🆕 Smarter, More Natural Clump Grouping**  
-    The auto-generated “clumpid” attribute (created by **Fix & Output Connect**) now groups strands by their actual 3D position (via a Voronoi pattern) instead of just their internal list order, so strands that are physically close together now share the same clump ID — giving a much more natural, bundled look. A new **Clump Scale** slider next to the **Fix & Output Connect** button lets you control how large or small the clumps are.
+### One-Time Setup (in Unreal Engine)
 
-*   **🆕 Force UE Scale Option**  
-    A new **Force UE Scale (100x)** checkbox in Hair Rig Prop Creator lets you manually force the correct scale compensation for Unreal-style (centimeter) armatures, in case it isn't detected automatically.
+Before using this feature for the first time, do the following inside Unreal Engine:
 
-### Bug Fixes
-*   **Fixed:** Hair bones could be generated in the reversed direction when using Guide Curves in Hair Rig Prop Creator.
-*   **Fixed:** Generated hair meshes/tubes could come out **100x too large** when targeting an Unreal-scaled (centimeter) Armature.
-*   **Fixed:** The auto-generated “roughness” attribute could end up as a single identical value across the whole hair system instead of varying naturally per strand.
-*   **Fixed:** Groom Export could fail unexpectedly in certain setups — export is now more robust and reliable.
-*   **Fixed:** Strand IDs (`groom_id`) could collide with each other when exporting multiple hair objects together, which could cause inconsistent results.
-*   Cleaned up a couple of unused leftover buttons in the UV Color Packer panel for a tidier UI.
-*   General performance improvement for the Wiggle Hair Sync bridge in scenes with many objects.
+1. Go to **Edit > Plugins**, search for **"Python Editor Script Plugin"**, and make sure it is **enabled**. If you just enabled it, restart Unreal Engine.
+2. Go to **Edit > Editor Project Settings**, type PLUGINS **"Python"** into the search box, and check **"Enable Remote Execution"**.
+3. If you just checked this box, restart Unreal Engine so the connection can start listening.
 
----
+You only need to do this once per Unreal Engine project/installation.
 
-## 🚀 GroomForge PRO v1.3 Release Notes
+### How to Use
 
-### [Bug Fix] Fixed 'Fix & Output Connect' Automation and Clump ID Issues
-* **Issue:** Previously, when using the 'Fix' function to automatically generate the node setup, the `clumpid` attribute failed to calculate or apply correctly to the strands.
-* **Fix:** Improved the internal logic of the `Fix & Output Connect` feature. The automatically generated `Store Named Attribute (clumpid)` node now properly fetches the `Random Value` data across the Spline domain and maintains a stable connection directly to the `Group Output`. Hair clumping effects will now display accurately per strand.
-![v1.3.0 Update node](assets/clumpid01.png)
----
+1. In Blender, select your finished Hair Curves (make sure **Export Mode** is set to **Unreal Engine**).
+2. In the **Groom Export Pro** panel, find the **"Send to Unreal Engine (Beta)"** box.
+3. Fill in:
+   - **UE Folder** — the Content Browser folder in your Unreal project where the Groom asset should be created (e.g. `/Game/Hair`). This is a folder only, do not add a file name here.
+   - **Asset Name** — the name you want the imported Groom asset to have (e.g. `MyCharacter_Hair`). Leave this empty to let GroomForge name it automatically based on your Blender file.
+4. Make sure Unreal Engine is open (on the same computer) with a project loaded.
+5. Click **Send to Unreal Engine**. GroomForge will export your hair and the Groom asset will appear automatically in the Content Browser at the folder/name you specified.
 
-### 💡 Advanced Styling Tips & Use Cases
+**💡 Tip:** After the first successful send, GroomForge remembers the connection for the rest of your Blender session, so repeated sends (e.g. after tweaking your hair) will connect much faster.
 
-#### Procedural Clumping via Voronoi Texture Masking
-For advanced styling, explore creative setups beyond the default node setup—such as layering multiple clump attributes for complex braids, realistic flyaways, or stylized layering.
-* **Procedural Clumping:** Instead of simple random values, try using a `Voronoi Texture` mapped to the strand positions to generate spatially clustered clump IDs.
-* **Realistic Clustering:** By passing the texture color through a `Separate Color` node and scaling it with a `Multiply` math node, you can procedurally group hair strands based on their physical proximity. This creates much more realistic, natural-looking hair clumps and partings.
-
-![v1.3.0 Update custom](assets/clumpid02.png)
----
-
-### 🎬 Showcase: Procedural Clumping in Action
-*Procedural Clumping via Voronoi Texture allows you to easily achieve realistic, engine-ready hair clustering.*
-* **Advanced Spatial Clustering:** By driving the `clumpid` attribute with a procedural `Voronoi Texture`, hair strands are automatically clustered based on their 3D proximity rather than simple random generation.
-* **Flawless Engine Integration:** As shown in the Unreal Engine viewport debug mode, each distinct color seamlessly visualizes a procedural clump unit. This data-driven approach yields incredibly natural hair breaks, realistic partings, and high-fidelity clumping behavior without any manual grooming overhead.
-* **Production-Ready Efficiency:** This setup bridges the gap between Blender's procedural generation and real-time engine shading, giving you complete pipeline control over complex hairstyles.
-![v1.3.0 Update UE5](assets/clumpid03.png)
+!!! warning
+    ⚠️ This feature only works when Blender and Unreal Engine are running on the **same computer**, and requires the one-time setup above to be completed inside Unreal Engine. It is currently a **Beta** feature — if the send fails, check the error message in Blender's status bar; it will tell you what to check.
 
 ---
 
-## 🚀 Version 1.2.0 Update
+## Troubleshooting (FAQ)
 
-### New Features & Improvements
-*   **🆕 Edge-to-Rig Generation**  
-    You can now generate professional rig structures directly from **selected edges** in Object Edit Mode. This allows for more flexible and custom skeleton layouts beyond standard curves.
+- **Q:** Hair direction is flipped in UE. → **A:** Rerun `Root Align` and verify the Target Mesh.
+- **Q:** Guide configuration looks awkward. → **A:** Recheck guide weight and node connections in `Guide Setting Tools`.
+- **Q:** Attributes are missing after import. → **A:** Ensure you clicked `Add Missing Attributes` before exporting.
+- **Q:** Scale or Position issues. → **A:** Verify that `Apply Scale` was performed in Blender.
+- **Q:** "No Unreal Engine Editor found" when using `Send to Unreal Engine`. → **A:** Make sure Unreal Engine is running on this same computer, and that you completed the one-time setup: **Python Editor Script Plugin** enabled and **Enable Remote Execution** checked in Editor Preferences (restart UE after changing either setting).
+- **Q:** Hair clumps look too big/small. → **A:** Adjust the **Clump Scale** slider next to `Fix & Output Connect` and run it again.
 
-*   **⚡ Enhanced Color UV Packing**  
-    The Color UV Pack engine has been overhauled for **better precision and faster processing**. It ensures UV islands are snapped to color blocks more accurately with significantly reduced calculation time.
-    
-*   **🎮 Unreal Engine Pipeline Optimization**  
-    Automatically generates UE-compatible attributes (UV Maps, Color Attributes, and Vertex Data) during hair card creation. This ensures a seamless transition to Unreal's hair shaders with pre-configured data such as Flow maps, Gradient groups, and Occlusion variations.
+---
 
-### Bug Fixes & Optimization
-*   Improved internal logic for UV tile group distribution.
-*   Minor UI/UX refinements for the property panels.
+## Recommended Workflow Summary
 
-### 🔄 Advanced Binding System
-*   **🆕 Hair Curve-to-Mesh Bind**  
-    A specialized solution to bind Hair Curves to mesh data. This ensures hair follows complex character movements perfectly, overcoming the native limitation where curves cannot be directly influenced by an Armature.
+Blender Hair Styling → 2. Assign Target Mesh → 3. Root Align → 4. Guide Setting → 5. Color View Inspection → 6. (Optional) Create Rig Prop → 7. (Optional) Hair Card Engine → 8. Export (Inject Missing Attributes) → 9. Import to Unreal Engine 5.x (manually, **or** with one click via **Send to Unreal Engine**) → 10. (If needed) Utilize UE 5.7 Hair Dataflow → 11. Final Application
 
-*   **🆕 Mesh-to-Rig Bind**  
-    Streamlined workflow to bind meshes to rigs (armatures). This feature optimizes the connection between your generated props and the skeletal system for stable animation.
+---
+
+## Final Export Checklist
+
+- [ ] Hair curves finalized and Scale applied
+- [ ] **Root Align** performed
+- [ ] **Fix & Output Connect** executed
+- [ ] (If using cards) **UV Color Projection** applied
+- [ ] **Add Missing Attributes** clicked
+- [ ] Attributes correctly recognized in the Groom asset after engine import
+- [ ] (If using **Send to Unreal Engine**) UE one-time setup completed: Python Editor Script Plugin enabled + Enable Remote Execution checked
+
+---
+
+## Summary
+
+> **GroomForge v1.5.0 is a professional pipeline solution that perfectly optimizes Blender grooming data to match Unreal Engine 5.x standard Groom systems and injects the necessary attributes for high-end results.**
+
+---
+
+*Built with MkDocs Material • Single-file GroomForge Wiki*
