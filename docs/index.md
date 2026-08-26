@@ -7,6 +7,8 @@
 # 🛠️ GroomForge v1.5.0 Official Wiki: Blender to Unreal Engine 5.x
 ---
 
+🇺🇸 English | [🇰🇷 한국어](./KO_index.md)
+
 ## Strategy & Pipeline Overview
 
 🎯 **Advanced Pipeline Solution for Professional Grooming**
