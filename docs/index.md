@@ -4,7 +4,27 @@
 
 
 
-# 🛠️ GroomForge v1.5.2 Official Wiki: Blender to Unreal Engine 5.x
+# 🛠️ GroomForge v1.6.0 Official Wiki: Blender to Unreal Engine 5.x
+---
+
+![GroomForge](assets/GroomForge_B.png)
+
+## 🔔 v1.6.0 Release Notes
+
+![new Hair Card](assets/Hair_card.png)
+
+- **Cycles renders correctly.** Hair used to come out as a solid black mass in Cycles.
+- **Hair ends taper away.** Card tips fade out to nothing instead of stopping on a blunt cut edge. **Strand Root Width** and **Strand Tip Width** set the thickness at each end in pixels.
+- **Cards sit on the scalp.** Cards no longer float off the head or sink into it.
+- **Root and tip stay the right way round.** Cards are no longer generated upside down.
+- **Cards are named after the hair curve.** Every groom keeps its own cards. Generating from a second groom used to delete the first one's cards.
+- **Max Poly Count is respected.** You get the number of cards you ask for, instead of only as many as the groom has clumps.
+- **Bake resolution now goes up to 4096.**
+- **Tip Stagger slider** controls how much the card ends scatter.
+- **Cylindrical Shading Normals** make flat cards shade like rounded bundles.
+- **Depth shading** bakes strands deeper inside a bundle darker, giving the hair real thickness.
+- **macOS now supports Blender 5.2 and newer.** Alembic export did not work there before.
+
 ---
 
 🇺🇸 English | [🇰🇷 한국어](./KO_index.md)
@@ -159,9 +179,12 @@ Automates accessory generation and rigging using guide curves as the physical sk
 *Visual result of the automated rigging and bone system based on guide curves.*
 
 *Edge-Based Rigging: Automatically generates rig structures based on selected edges in Edit Mode for custom skeleton layouts.
+
+<!-- 현재 위치가 루트 폴더인 경우 -->
 <video width="100%" controls>
-  <source src="../assets/edge_rig.mp4" type="video/mp4">
+  <source src="./assets/edge_rig.mp4" type="video/mp4">
 </video>
+
 
 
 ---
@@ -182,8 +205,6 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
 - **🆕 Cylindrical Shading Normals:** Flat cards shade like rounded bundles.
 - **🆕 Depth Shading:** Strands deeper inside a bundle bake darker, giving the hair real thickness.
 
-![New Card](assets/Hair_card.png)
-
 ![Hair Card - Profile Curves](assets/blender_aukuA3DJxk.gif)  
 *Instant hair card generation based on Profile Curves or Base Curves.*
 
@@ -196,7 +217,7 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
  This ensures a seamless transition to Unreal's hair shaders with pre-configured data such as Flow maps, Gradient groups, and Occlusion variations.
 
 <video width="100%" controls preload="metadata">
-  <source src="../assets/card_re.mp4" type="video/mp4">
+  <source src="./assets/card_re.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 *Automatically places and aligns thousands of hair card UVs using a Color Guide Image.*
@@ -261,12 +282,12 @@ An independent, off-by-default export option that lets Unreal Engine reproduce B
     Quick binding based on proximity, ensuring stable results even in fast-paced animations.
 
 <video width="100%" controls>
-  <source src="../assets/Hair_bind1.mp4" type="video/mp4">
+  <source src="./assets/Hair_bind1.mp4" type="video/mp4">
 </video>
 
 
 <video width="100%" controls>
-  <source src="../assets/Hair_bind2.mp4" type="video/mp4">
+  <source src="./assets/Hair_bind2.mp4" type="video/mp4">
 </video>
 
 ---
@@ -333,7 +354,7 @@ Blender Hair Styling → 2. Assign Target Mesh → 3. Root Align → 4. Guide Se
 
 ## Summary
 
-> **GroomForge v1.5.2 is a professional pipeline solution that perfectly optimizes Blender grooming data to match Unreal Engine 5.x standard Groom systems and injects the necessary attributes for high-end results.**
+> **GroomForge v1.6.0 is a professional pipeline solution that perfectly optimizes Blender grooming data to match Unreal Engine 5.x standard Groom systems and injects the necessary attributes for high-end results.**
 
 ---
 

@@ -4,7 +4,27 @@
 
 
 
-# 🛠️ GroomForge v1.5.2 공식 위키: Blender to Unreal Engine 5.x
+# 🛠️ GroomForge v1.6.0 공식 위키: Blender to Unreal Engine 5.x
+---
+
+![GroomForge](assets/GroomForge_B.png)
+
+## 🔔 v1.6.0 릴리즈 노트
+
+![뉴 헤어카드](assets/Hair_card.png)
+
+- **Cycles 렌더가 정상으로 나옵니다.** 예전에는 Cycles에서 머리가 새까만 덩어리로 나왔습니다.
+- **헤어 끝이 가늘어집니다.** 카드 끝이 뭉툭하게 잘린 단면으로 끝나지 않고 서서히 얇아져 사라집니다. **Strand Root Width / Strand Tip Width** 로 뿌리와 끝의 굵기를 픽셀 단위로 각각 정합니다.
+- **카드가 두피에 붙어서 생성됩니다.** 일부 카드가 머리에서 떠 있거나 파묻히던 문제가 사라졌습니다.
+- **루트와 팁이 뒤바뀌지 않습니다.** 일부 카드가 거꾸로 생성되던 문제가 사라졌습니다.
+- **헤어커브 이름으로 카드가 만들어집니다.** 헤어커브가 여러 개여도 각각의 카드가 따로 남습니다. 예전에는 새로 생성할 때 앞서 만든 카드가 지워졌습니다.
+- **Max Poly Count 가 실제로 반영됩니다.** 지정한 만큼 카드가 만들어집니다. 예전에는 그루밍의 Clump 개수만큼만 나왔습니다.
+- **베이크 해상도에 4096 이 추가되었습니다.**
+- **Tip Stagger 슬라이더** 로 카드 끝이 흩어지는 정도를 조절합니다.
+- **원통형 셰이딩 노멀** 로 납작한 카드가 둥근 다발처럼 음영이 집니다.
+- **깊이 음영** 으로 다발 안쪽 가닥이 더 어둡게 구워져 머리에 두께감이 생깁니다.
+- **macOS 에서 Blender 5.2 이상을 지원합니다.** 이전에는 해당 버전에서 Alembic 내보내기가 동작하지 않았습니다.
+
 ---
 
 [🇺🇸 English](./index.md) | 🇰🇷 한국어
@@ -159,8 +179,9 @@ Blender Geometry Nodes의 특성상 실시간 뷰포트 표시가 실제 내보�
 *가이드 커브 기반 자동 리깅 및 본 시스템의 시각적 결과.*
 
 *엣지 기반 리깅: 커스텀 골격 레이아웃을 위해 Edit Mode에서 선택한 엣지를 기반으로 리그 구조를 자동 생성합니다.
+
 <video width="100%" controls>
-  <source src="../assets/edge_rig.mp4" type="video/mp4">
+  <source src="./assets/edge_rig.mp4" type="video/mp4">
 </video>
 
 
@@ -182,8 +203,6 @@ Unreal MetaHuman 헤어 카드 생성기의 느린 생성 속도를 보완하는
 - **🆕 원통형 셰이딩 노멀:** 납작한 카드가 둥근 다발처럼 부드럽게 음영이 집니다.
 - **🆕 깊이 음영:** 다발 안쪽에 있는 가닥이 더 어둡게 구워져 머리에 두께감이 생깁니다.
 
-![뉴 헤어카드](assets/Hair_card.png)
-
 ![헤어 카드 - 프로필 커브](assets/blender_aukuA3DJxk.gif)  
 *프로필 커브 또는 베이스 커브를 기반으로 즉시 헤어 카드를 생성합니다.*
 
@@ -196,7 +215,7 @@ Unreal MetaHuman 헤어 카드 생성기의 느린 생성 속도를 보완하는
  Flow 맵, 그래디언트 그룹, Occlusion 변형과 같은 사전 구성된 데이터로 Unreal의 헤어 셰이더로 원활하게 전환됩니다.
 
 <video width="100%" controls preload="metadata">
-  <source src="../assets/card_re.mp4" type="video/mp4">
+  <source src="./assets/card_re.mp4" type="video/mp4">
   브라우저가 video 태그를 지원하지 않습니다.
 </video>
 *컬러 가이드 이미지를 사용하여 수천 개의 헤어 카드 UV를 자동으로 배치하고 정렬합니다.*
@@ -261,12 +280,12 @@ Blender에서 Hair Curves를 Armature에 직접 페어런트하거나 바인딩�
     근접성 기반의 빠른 바인딩으로 빠른 애니메이션에서도 안정적인 결과 보장.
 
 <video width="100%" controls>
-  <source src="../assets/Hair_bind1.mp4" type="video/mp4">
+  <source src="./assets/Hair_bind1.mp4" type="video/mp4">
 </video>
 
 
 <video width="100%" controls>
-  <source src="../assets/Hair_bind2.mp4" type="video/mp4">
+  <source src="./assets/Hair_bind2.mp4" type="video/mp4">
 </video>
 
 ---
@@ -333,7 +352,7 @@ Blender 헤어 스타일링 → 2. 타겟 메시 지정 → 3. Root Align → 4.
 
 ## 요약
 
-> **GroomForge v1.5.2는 Blender 그루밍 데이터를 Unreal Engine 5.x 표준 Groom 시스템에 완벽하게 최적화하고 하이엔드 결과에 필요한 속성을 주입하는 전문 파이프라인 솔루션입니다.**
+> **GroomForge v1.6.0는 Blender 그루밍 데이터를 Unreal Engine 5.x 표준 Groom 시스템에 완벽하게 최적화하고 하이엔드 결과에 필요한 속성을 주입하는 전문 파이프라인 솔루션입니다.**
 
 ---
 
