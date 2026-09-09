@@ -182,6 +182,8 @@ A technical solution to complement the slow generation speeds of the Unreal Meta
 - **🆕 Cylindrical Shading Normals:** Flat cards shade like rounded bundles.
 - **🆕 Depth Shading:** Strands deeper inside a bundle bake darker, giving the hair real thickness.
 
+![New Card](assets/Hair_card.png)
+
 ![Hair Card - Profile Curves](assets/blender_aukuA3DJxk.gif)  
 *Instant hair card generation based on Profile Curves or Base Curves.*
 
