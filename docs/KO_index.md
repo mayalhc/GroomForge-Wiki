@@ -4,7 +4,7 @@
 
 
 
-# 🛠️ GroomForge v1.6.0 공식 위키: Blender to Unreal Engine 5.x
+# 🛠️ GroomForge v1.6.0 공식 위키: Blender to Unreal Engine 5.7 / 5.8
 ---
 
 ![GroomForge](assets/GroomForge_B.png)
@@ -27,13 +27,13 @@
 
 ---
 
-[🇺🇸 English](./index.md) | 🇰🇷 한국어
+[🇺🇸 English](./guide.md) | 🇰🇷 한국어
 
 ## 전략 및 파이프라인 개요
 
 🎯 **전문 그루밍을 위한 고급 파이프라인 솔루션**
 
-GroomForge v1.5.0은 Blender Hair Curves를 Unreal Engine 5.x Groom 시스템 및 5.7 Hair Dataflow에 최적화된 에셋으로 변환하고 내보내기 위해 설계된 전문 파이프라인 애드온입니다. Maya XGen이나 Houdini 같은 도구에서만 가능했던 고급 기능을 Blender 환경에서 직접 구현하여 정밀한 가이드 컨트롤과 속성 주입을 제공합니다.
+GroomForge v1.6.0은 Blender Hair Curves를 Unreal Engine 5.7 / 5.8 Groom 시스템 및 5.7 Hair Dataflow에 최적화된 에셋으로 변환하고 내보내기 위해 설계된 전문 파이프라인 애드온입니다. Maya XGen이나 Houdini 같은 도구에서만 가능했던 고급 기능을 Blender 환경에서 직접 구현하여 정밀한 가이드 컨트롤과 속성 주입을 제공합니다.
 
 ![고급 렌더링 속성 잠금 해제 (v1.1.0 업데이트)](assets/image.png)  
 *고급 렌더링 속성 잠금 해제 (v1.1.0 업데이트)*
@@ -56,13 +56,13 @@ GroomForge v1.5.0은 Blender Hair Curves를 Unreal Engine 5.x Groom 시스템 �
 - **🆕 카드 텍스처·머티리얼 자동 생성:** 카드를 생성하면 바로 사용 가능한 텍스처와 EEVEE·Cycles 머티리얼이 자동으로 함께 만들어집니다 — 텍스처나 셰이더를 따로 만들 필요가 없습니다.
 
 ### 2. 사전 요구 사항 및 요구 조건
-- **설치:** `Edit > Preferences > Add-ons > Install` → `GroomForge.zip` 선택 후 활성화.
-- **권장 환경:** Blender 4.x / 5.x, Unreal Engine 5.x (최신 기능은 5.7 권장).
+- **설치:** `Edit > Preferences > Get Extensions > Install from Disk` → `groomforge_pro-1.6.0.zip` 선택 후 활성화. GroomForge는 **Blender Extension**이므로 Add-ons 탭이 아니라 **Extensions** 탭에 표시됩니다.
+- **지원 환경:** Blender **4.5 – 5.2**, Unreal Engine **5.7 – 5.8**. Windows (x64) 및 macOS (Apple Silicon).
 - **필요 데이터:** Blender Hair Curves (네이티브 또는 타사 애드온), 타겟 메시 (캐릭터 헤드 메시).
 
 !!! warning
-    ⚠️ **중요:** GroomForge v1.4.0은 **헤어 생성 도구가 아닙니다.**  
-기존 헤어 커브를 Unreal Engine 5.x용으로 **정리, 가이드화, 리깅, 속성 설정, 내보내기**하는 파이프라인 애드온입니다.
+    ⚠️ **중요:** GroomForge는 **헤어 생성 도구가 아닙니다.**  
+기존 헤어 커브를 Unreal Engine 5.7 / 5.8용으로 **정리, 가이드화, 리깅, 속성 설정, 내보내기**하는 파이프라인 애드온입니다.
 
 ### 🚀 크로스 플랫폼 성능 혁신
 GroomForge는 플랫폼의 경계를 허물며 Windows와 Mac(M1/M2/M3) 환경 모두에서 최고의 성능을 제공하도록 설계되었습니다. 대규모 그루밍 데이터셋을 처리할 때도 엔진 수준의 안정성을 보장합니다.
@@ -86,7 +86,7 @@ GroomForge는 플랫폼의 경계를 허물며 Windows와 Mac(M1/M2/M3) 환경 �
 6. **(선택) 헤어 리그 프롭 생성** — 가이드 기반 액세서리 및 자동 리깅 생성.
 7. **(선택) 헤어 카드 엔진 활용** — UE 호환 고속 헤어 카드 및 UV 레이아웃 생성.
 8. **고급 Groom 내보내기 실행** — **Add Missing Attributes**로 최종 렌더링 속성을 주입하고 Alembic 내보내기.
-9. **Unreal Engine 5.x에서 적용** — Groom 에셋 가져오기 및 검증 (필요시 5.7 Dataflow와 통합).
+9. **Unreal Engine 5.7 / 5.8에서 적용** — Groom 에셋 가져오기 및 검증 (필요시 5.7 Dataflow와 통합).
 
 ---
 
@@ -97,7 +97,7 @@ GroomForge는 플랫폼의 경계를 허물며 Windows와 Mac(M1/M2/M3) 환경 �
 **Add-ons** 탭 선택 → **Install...** 클릭 → `GroomForge.zip` 선택 → **Install Add-on** 클릭.  
 "GroomForge"를 검색하고 체크박스를 선택하여 활성화합니다.
 
-![설치](assets/Install.gif)
+<video src="assets/Install.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="설치"></video>
 
 ---
 
@@ -107,7 +107,7 @@ GroomForge는 플랫폼의 경계를 허물며 Windows와 Mac(M1/M2/M3) 환경 �
 - **사용 방법:** Hair Curves 선택 → 타겟 메시 선택 → **Root Align** 클릭.
 - **정밀도:** 메시에 가장 가까운 점을 자동으로 식별하여 Root로 설정, 헤어가 떠 있거나 루트와 팁이 뒤바뀌는 시뮬레이션 오류를 방지합니다.
 
-![Root Align](assets/blender_KqxPpDRfo2.gif)  
+<video src="assets/blender_KqxPpDRfo2.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="Root Align"></video>  
 *커브의 시작점과 끝점이 뒤바뀌어 있어도 타겟 메시(머리)에 가장 가까운 점을 자동으로 식별하여 Root를 재설정하고 방향을 올바르게 재정렬합니다.*
 
 ---
@@ -119,14 +119,14 @@ Unreal Groom 시스템에 필요한 Guide 속성을 정밀하게 정의하고 �
 - **Select 1 / 0:** 현재 가이드를 빠르게 선택하거나 선택을 반전.
 - **Random Guide:** 헤어의 특정 비율을 무작위로 가이드로 변환.
 
-![가이드 설정 도구](assets/blender_RPCN1OPj8f.gif)
+<video src="assets/blender_RPCN1OPj8f.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="가이드 설정 도구"></video>
 
 **Fix & Output Connect:** Geometry Nodes 내에서 Guide 속성이 스트랜드로 "번지는" 것을 방지하는 데 필요한 노드 구조를 자동으로 구축합니다.
 
-![애드온으로 픽스](assets/blender_09rVWBzNOp.gif)  
+<video src="assets/blender_09rVWBzNOp.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="애드온으로 픽스"></video>  
 *Blender 헤어 애드온 사용 시 (예: HairBRIC, Hair Tool)*
 
-![네이티브 노드로 픽스](assets/blender_UA91lgEH3p.gif)  
+<video src="assets/blender_UA91lgEH3p.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="네이티브 노드로 픽스"></video>  
 **네이티브 Blender 헤어 노드(Geometry Nodes) 사용 시**
 
 **💡 프로 팁:** 이 기능은 **HairBRIC** 애드온과 함께 사용할 때 가장 직관적으로 작동합니다.
@@ -138,10 +138,10 @@ Unreal Groom 시스템에 필요한 Guide 속성을 정밀하게 정의하고 �
 ### 4. 가이드 컬러 뷰 (시각적 검사)
 내보내기 전 데이터 구성의 최종 시각적 검증. (가이드: 빨간색, 스트랜드: 파란색)
 
-![가이드 컬러 뷰 - 애드온](assets/blender_E8bZe81J2u.gif)  
+<video src="assets/blender_E8bZe81J2u.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="가이드 컬러 뷰 - 애드온"></video>  
 **Blender 헤어 애드온 사용 시 (예: HairBRIC, Hair Tool)**
 
-![가이드 컬러 뷰 - 네이티브](assets/blender_r25UoaBtZz.gif)  
+<video src="assets/blender_r25UoaBtZz.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="가이드 컬러 뷰 - 네이티브"></video>  
 **네이티브 Blender 헤어 노드(Geometry Nodes) 사용 시**
 
 !!! warning
@@ -169,13 +169,13 @@ Blender Geometry Nodes의 특성상 실시간 뷰포트 표시가 실제 내보�
 - **랜덤 스케일:** 자연스러운 시각적 변화를 위해 인스턴스 크기를 무작위화합니다.
 - **강제 UE 스케일 (100x):** GroomForge는 타겟 아마추어가 Unreal 스타일 센티미터 스케일을 사용하는지 자동으로 감지하고 이를 보정합니다. 어떤 이유로 올바르게 감지되지 않으면 이 상자를 체크하여 수동으로 올바른 스케일을 강제합니다.
 
-![리그 생성기 - 단일 메시](assets/RigCreator1.gif)  
+<video src="assets/RigCreator1.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="리그 생성기 - 단일 메시"></video>  
 *사용자가 선택한 단일 메시를 가이드 커브를 따라 정밀하게 배치합니다.*
 
-![리그 생성기 - 컬렉션 산포](assets/RigCreator2.gif)  
+<video src="assets/RigCreator2.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="리그 생성기 - 컬렉션 산포"></video>  
 *컬렉션의 여러 메시를 무작위 간격과 스케일로 자동 산포합니다.*
 
-![리그 생성기 - 최종 결과](assets/RigCreator31.gif)  
+<video src="assets/RigCreator31.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="리그 생성기 - 최종 결과"></video>  
 *가이드 커브 기반 자동 리깅 및 본 시스템의 시각적 결과.*
 
 *엣지 기반 리깅: 커스텀 골격 레이아웃을 위해 Edit Mode에서 선택한 엣지를 기반으로 리그 구조를 자동 생성합니다.
@@ -203,10 +203,10 @@ Unreal MetaHuman 헤어 카드 생성기의 느린 생성 속도를 보완하는
 - **🆕 원통형 셰이딩 노멀:** 납작한 카드가 둥근 다발처럼 부드럽게 음영이 집니다.
 - **🆕 깊이 음영:** 다발 안쪽에 있는 가닥이 더 어둡게 구워져 머리에 두께감이 생깁니다.
 
-![헤어 카드 - 프로필 커브](assets/blender_aukuA3DJxk.gif)  
+<video src="assets/blender_aukuA3DJxk.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="헤어 카드 - 프로필 커브"></video>  
 *프로필 커브 또는 베이스 커브를 기반으로 즉시 헤어 카드를 생성합니다.*
 
-![헤어 카드 - LOD 단계](assets/HairCard2.gif)  
+<video src="assets/HairCard2.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="헤어 카드 - LOD 단계"></video>  
 *Unreal Engine의 LOD 시스템과 완벽하게 호환되는 단계별 헤어 카드를 생성합니다.*
 
 
@@ -239,14 +239,14 @@ Blender 커브를 Unreal Engine이 즉시 이해하는 "진짜 Groom" 데이터�
 
 - **Add Missing Attributes:** 한 번의 클릭으로 모든 필수 렌더링 속성 노드를 생성하고 주입합니다: **ClumpID, Occlusion, Roughness, Root UV**.
 
-![고급 내보내기](assets/blender_OTIdvEWgkU.gif)  
+<video src="assets/blender_OTIdvEWgkU.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="고급 내보내기"></video>  
 *하나 또는 여러 개의 헤어 커브를 선택하여 단일 Alembic 파일로 내보냅니다.*
 
 ![더 많은 속성, 더 나은 비주얼](assets/UE_Import_all.png)  
 **더 많은 속성, 더 나은 비주얼**
 
 **💎 시각적 검증: MetaHuman 셰이딩 호환성**  
-![MetaHuman Root UV 데모](assets/MetaHuman-ezgif.com-video-to-gif-converter.gif)  
+<video src="assets/MetaHuman-ezgif.com-video-to-gif-converter.mp4" autoplay loop muted playsinline style="width:100%;border-radius:6px" title="MetaHuman Root UV 데모"></video>  
 *GroomForge의 Root UV 주입은 100% 정확하여 MetaHuman Creator에서 직접 실시간 Ombre 및 Highlight 조정이 가능합니다.*
 
 ---
@@ -334,7 +334,7 @@ Unreal Engine 프로젝트/설치당 한 번만 수행하면 됩니다.
 
 ## 권장 작업 흐름 요약
 
-Blender 헤어 스타일링 → 2. 타겟 메시 지정 → 3. Root Align → 4. 가이드 설정 → 5. 컬러 뷰 검사 → 6. (선택) 리그 프롭 생성 → 7. (선택) 헤어 카드 엔진 → 8. 내보내기 (누락 속성 주입) → 9. Unreal Engine 5.x로 가져오기 (수동, **또는** **Send to Unreal Engine**으로 원클릭) → 10. (필요시) UE 5.7 Hair Dataflow 활용 → 11. 최종 적용
+Blender 헤어 스타일링 → 2. 타겟 메시 지정 → 3. Root Align → 4. 가이드 설정 → 5. 컬러 뷰 검사 → 6. (선택) 리그 프롭 생성 → 7. (선택) 헤어 카드 엔진 → 8. 내보내기 (누락 속성 주입) → 9. Unreal Engine 5.7 / 5.8로 가져오기 (수동, **또는** **Send to Unreal Engine**으로 원클릭) → 10. (필요시) UE 5.7 Hair Dataflow 활용 → 11. 최종 적용
 
 ---
 
@@ -352,7 +352,7 @@ Blender 헤어 스타일링 → 2. 타겟 메시 지정 → 3. Root Align → 4.
 
 ## 요약
 
-> **GroomForge v1.6.0는 Blender 그루밍 데이터를 Unreal Engine 5.x 표준 Groom 시스템에 완벽하게 최적화하고 하이엔드 결과에 필요한 속성을 주입하는 전문 파이프라인 솔루션입니다.**
+> **GroomForge v1.6.0는 Blender 그루밍 데이터를 Unreal Engine 5.7 / 5.8 표준 Groom 시스템에 완벽하게 최적화하고 하이엔드 결과에 필요한 속성을 주입하는 전문 파이프라인 솔루션입니다.**
 
 ---
 
