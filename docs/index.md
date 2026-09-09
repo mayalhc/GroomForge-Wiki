@@ -63,7 +63,7 @@ and to run this pipeline. Taught in Korean on CLASS101.
 [![The add-on pack included with the course](assets/products/course-pack.jpg)](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .cs-wide }
 
 **Rated 4.7 from 11 reviews · #4 in Game Graphics on CLASS101 · ₩40,000/month
-over 5 months · 국비지원 가능**
+over 5 months**
 
 [:material-play-circle: CLASS101](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .md-button .md-button--primary }
 [:material-account-heart: Patreon](https://www.patreon.com/c/ChamIseul){ .md-button }
