@@ -18,13 +18,11 @@ Character tools for people who ship. Hair and clothing items, MetaHuman data,
 grooming, bone physics and animation — built to survive the trip from Blender
 into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 
-[:material-cart: Superhive store](https://superhivemarket.com/creators/chamiseul){ .md-button .md-button--primary }
-[:fontawesome-brands-youtube: YouTube](https://www.youtube.com/@ChamIseul){ .md-button }
+[:material-play-circle: Take the CLASS101 course](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .md-button .md-button--primary }
+[:material-cart: Superhive store](https://superhivemarket.com/creators/chamiseul){ .md-button }
 
 </div>
 </div>
-
-![The unified live pipeline: Blender, Unreal Engine, Cascadeur, Marvelous Designer and AI pose refinement](assets/products/hero-pipeline.jpg){ .cs-wide }
 
 <div class="cs-stack" markdown>
 :simple-blender: **Blender** 4.5 – 5.2 &nbsp;·&nbsp;
@@ -38,15 +36,43 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 
 ### :material-school: MetaHuman 헤어·의상 제작 & FAB 판매 수익화 클래스
 
-The full course this whole toolset came out of: building MetaHuman hair and
-clothing in Blender and Marvelous Designer, taking it into Unreal Engine, and
-selling it on Fab. Taught in Korean on CLASS101 — rated 4.7, ranked #4 in
-Game Graphics.
+**Making MetaHuman hair and clothing, and selling it on Fab.** This is where
+the whole toolset came from — every add-on on this page was written to teach
+and to run this pipeline. Taught in Korean on CLASS101.
+
+<div class="cs-course-grid" markdown>
+
+:material-content-cut: **Hair**
+: Grooming in Blender from first strand to a finished MetaHuman-ready groom —
+  guides, clumping, hair cards, and the export that survives Unreal.
+
+:material-tshirt-crew: **Clothing**
+: Garments in Marvelous Designer, brought back through Blender and fitted onto
+  a MetaHuman body.
+
+:material-unreal: **Unreal**
+: Getting all of it into Unreal Engine 5.7 / 5.8 — grooms, wardrobe items,
+  physics that behaves.
+
+:material-cash-multiple: **Selling it**
+: Packaging and publishing the result on Fab, which is the part most tutorials
+  stop short of.
+
+</div>
+
+[![The add-on pack included with the course](assets/products/course-pack.jpg)](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .cs-wide }
+
+**Rated 4.7 from 11 reviews · #4 in Game Graphics on CLASS101 · ₩40,000/month
+over 5 months · 국비지원 가능**
 
 [:material-play-circle: CLASS101](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .md-button .md-button--primary }
 [:material-account-heart: Patreon](https://www.patreon.com/c/ChamIseul){ .md-button }
+[:fontawesome-brands-youtube: YouTube](https://www.youtube.com/@ChamIseul){ .md-button }
 
 </div>
+
+![The unified live pipeline: Blender, Unreal Engine, Cascadeur, Marvelous Designer and AI pose refinement](assets/products/hero-pipeline.jpg){ .cs-wide }
+
 
 ## Hair and clothing items
 

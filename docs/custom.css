@@ -163,3 +163,27 @@
   border-color: var(--md-accent-fg-color);
   color: #1b1b1b;
 }
+
+/* what the course covers */
+.cs-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: .4rem 1.6rem;
+  margin: 1.2rem 0 1.4rem;
+}
+.md-typeset .cs-course-grid dl {
+  margin: 0;
+}
+.md-typeset .cs-course-grid dt {
+  font-weight: 700;
+}
+.md-typeset .cs-course-grid dd {
+  margin: .15rem 0 .9rem;
+  font-size: .76rem;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .cs-feature a > img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
