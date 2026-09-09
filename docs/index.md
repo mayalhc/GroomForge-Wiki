@@ -32,11 +32,37 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 **MetaHuman** &nbsp;·&nbsp; **Cascadeur** &nbsp;·&nbsp; **Marvelous Designer**
 </div>
 
-## Hair
+## The course
+
+<div class="cs-feature" markdown>
+
+### :material-school: MetaHuman 헤어·의상 제작 & FAB 판매 수익화 클래스
+
+The full course this whole toolset came out of: building MetaHuman hair and
+clothing in Blender and Marvelous Designer, taking it into Unreal Engine, and
+selling it on Fab. Taught in Korean on CLASS101 — rated 4.7, ranked #4 in
+Game Graphics.
+
+[:material-play-circle: CLASS101](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6){ .md-button .md-button--primary }
+[:material-account-heart: Patreon](https://www.patreon.com/c/ChamIseul){ .md-button }
+
+</div>
+
+## Hair and clothing items
+
+Finished, game-ready assets rather than tools: realistic grooms, beards,
+braids and cornrows, and outfits — all built with the add-ons below and
+prepared for MetaHuman.
+
+[:material-storefront: Browse the items on Fab](https://www.fab.com/sellers/Chamiseul%20Studio%20Ci){ .md-button }
+
+## The add-ons
+
+### Hair
 
 <div class="grid cards" markdown>
 
--   ![GroomForge PRO](assets/products/groomforge.jpg)
+-   [![GroomForge PRO](assets/products/groomforge.jpg)](guide.md)
 
     ### GroomForge PRO
 
@@ -50,7 +76,7 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
     [:material-translate: 한국어](KO_index.md) ·
     [:material-cart: Store](https://superhivemarket.com/products/groomforge)
 
--   ![GroomFlow PRO](assets/products/groomflow.jpg)
+-   [![GroomFlow PRO](assets/products/groomflow.jpg)](https://mayalhc.github.io/GroomFlow_Pro/)
 
     ### GroomFlow PRO
 
@@ -66,11 +92,11 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 
 </div>
 
-## Character
+### Character
 
 <div class="grid cards" markdown>
 
--   ![MetaBridge DNA](assets/products/metabridge.jpg)
+-   [![MetaBridge DNA](assets/products/metabridge.jpg)](https://mayalhc.github.io/metabridge_dna/)
 
     ### MetaBridge DNA
 
@@ -84,7 +110,7 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
     [:material-translate: 한국어](https://mayalhc.github.io/metabridge_dna/KO_index/) ·
     [:material-cart: Store](https://superhivemarket.com/products/metabridge_dna)
 
--   ![MetaBridge Forge](assets/products/metabridge-forge.jpg)
+-   [![MetaBridge Forge](assets/products/metabridge-forge.jpg)](https://mayalhc.github.io/MetaBridgeForge_Wiki/)
 
     ### MetaBridge Forge
 
@@ -94,15 +120,16 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 
     ---
 
-    [:material-book-open-variant: Guide](https://mayalhc.github.io/MetaBridgeForge_Wiki/)
+    [:material-book-open-variant: Guide](https://mayalhc.github.io/MetaBridgeForge_Wiki/) ·
+    [:material-cart: Store](https://mayalhc.gumroad.com/)
 
 </div>
 
-## Motion
+### Motion
 
 <div class="grid cards" markdown>
 
--   ![NovaBone Dynamics](assets/products/novabone.jpg)
+-   [![NovaBone Dynamics](assets/products/novabone.jpg)](https://mayalhc.github.io/novabone/)
 
     ### NovaBone Dynamics
 
@@ -116,7 +143,7 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
     [:material-translate: 한국어](https://mayalhc.github.io/novabone/KO_index/) ·
     [:material-cart: Store](https://superhivemarket.com/products/novabone-dynamics)
 
--   ![MotionForge](assets/products/motionforge.jpg)
+-   [![MotionForge](assets/products/motionforge.jpg)](https://mayalhc.github.io/motionforge/)
 
     ### MotionForge
 
@@ -129,7 +156,7 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
     [:material-translate: 한국어](https://mayalhc.github.io/motionforge/KO_index/) ·
     [:material-cart: Store](https://superhivemarket.com/products/motionforge)
 
--   ![Wiggle 2 RTX](assets/products/wiggle2.jpg)
+-   [![Wiggle 2 RTX](assets/products/wiggle2.jpg)](https://mayalhc.github.io/Wiggle2-RTX/)
 
     ### Wiggle 2: RTX Edition
 
@@ -143,11 +170,11 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
 
 </div>
 
-## Effects
+### Effects
 
 <div class="grid cards" markdown>
 
--   ![VFXForge PRO](assets/products/vfxforge.jpg)
+-   [![VFXForge PRO](assets/products/vfxforge.jpg)](https://mayalhc.github.io/VFXForge_PRO_Guide/)
 
     ### VFXForge PRO <span class="cs-badge">In development</span>
 
@@ -173,3 +200,17 @@ into Unreal Engine 5.7 / 5.8 with nothing lost on the way.
     **Making it move** → NovaBone Dynamics.
     **MetaHuman character data** → MetaBridge DNA in Blender, MetaBridge Forge in Unreal.
     **Animation** → MotionForge. **Effects** → VFXForge PRO.
+
+---
+
+## Where to find everything
+
+| | |
+|---|---|
+| **Superhive Market** | [superhivemarket.com/creators/chamiseul](https://superhivemarket.com/creators/chamiseul) — the Blender add-ons |
+| **Fab** | [Chamiseul Studio Ci](https://www.fab.com/sellers/Chamiseul%20Studio%20Ci) — hair and clothing items, plus the add-ons |
+| **Gumroad** | [mayalhc.gumroad.com](https://mayalhc.gumroad.com/) — every add-on, including MetaBridge Forge for Unreal |
+| **ArtStation** | [artstation.com/chamiseul/store](https://www.artstation.com/chamiseul/store) |
+| **CLASS101** | [MetaHuman 헤어·의상 제작 & FAB 판매 수익화 클래스](https://class101.net/ko/products/688d8d0b6a08dc6e2607efb6) |
+| **Patreon** | [patreon.com/c/ChamIseul](https://www.patreon.com/c/ChamIseul) |
+| **YouTube** | [@ChamIseul](https://www.youtube.com/@ChamIseul) |

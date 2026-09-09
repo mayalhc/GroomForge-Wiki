@@ -142,3 +142,24 @@
   color: var(--md-default-bg-color);
   background: var(--md-accent-fg-color);
 }
+
+/* the course callout */
+.cs-feature {
+  padding: 1.6rem 1.6rem 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background:
+    linear-gradient(135deg, rgba(255, 193, 7, .10), transparent 60%),
+    var(--md-code-bg-color);
+}
+.md-typeset .cs-feature h3 {
+  margin-top: 0;
+}
+
+/* the primary button follows the accent, not the blue default */
+.md-typeset .md-button--primary {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: #1b1b1b;
+}

@@ -84,11 +84,4 @@ nav:
   - GroomForge PRO:
       - English: guide.md
       - 한국어: KO_index.md
-  - Other guides:
-      - GroomFlow PRO: https://mayalhc.github.io/GroomFlow_Pro/
-      - MetaBridge DNA: https://mayalhc.github.io/metabridge_dna/
-      - MetaBridge Forge: https://mayalhc.github.io/MetaBridgeForge_Wiki/
-      - MotionForge: https://mayalhc.github.io/motionforge/
-      - NovaBone Dynamics: https://mayalhc.github.io/novabone/
-      - VFXForge PRO: https://mayalhc.github.io/VFXForge_PRO_Guide/
-      - Wiggle 2 RTX: https://mayalhc.github.io/Wiggle2-RTX/
+  - Other guides: guides.md
