@@ -2,6 +2,10 @@ site_name: chamiseul
 site_description: User guides for the chamiseul Blender and Unreal Engine add-ons
 site_author: chamiseul
 site_url: https://mayalhc.github.io/GroomForge-Wiki/
+extra:
+  analytics:
+    provider: google
+    property: G-SNSJS19D0M  # 여기에 발급받은 측정 ID 입력
 
 theme:
   name: material
