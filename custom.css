@@ -1,0 +1,189 @@
+/* --- landing hero --- */
+.cs-hero {
+  position: relative;
+  margin: -1.2rem -0.8rem 1.2rem;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0b0d12;
+}
+.cs-hero img.cs-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .30;
+  filter: blur(7px) saturate(1.25);
+  transform: scale(1.06);
+  z-index: -1;
+}
+.cs-hero .cs-hero-text {
+  padding: 4rem 2rem 3.2rem;
+  text-align: center;
+  background: radial-gradient(760px 300px at 50% 40%, rgba(8, 10, 14, .72), rgba(8, 10, 14, .34) 70%, transparent);
+}
+.cs-hero h1 {
+  margin: 0 0 .5rem;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: -.03em;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .65);
+}
+.cs-hero h3 {
+  margin: 0 auto 1rem;
+  max-width: 44rem;
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--md-accent-fg-color);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .7);
+}
+.cs-hero p {
+  max-width: 42rem;
+  margin: 0 auto 1.4rem;
+  color: rgba(255, 255, 255, .84);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .8);
+}
+.cs-hero .md-button {
+  color: #fff;
+  border-color: rgba(255, 255, 255, .5);
+}
+.cs-hero .md-button--primary {
+  border-color: transparent;
+}
+
+/* the tool strip under the hero */
+.cs-stack {
+  margin: 0 0 2.4rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  font-size: .8rem;
+  letter-spacing: .01em;
+  border-radius: 10px;
+  background: var(--md-code-bg-color);
+  color: var(--md-default-fg-color--light);
+}
+.cs-stack .twemoji {
+  vertical-align: -.18em;
+  height: 1.15em;
+}
+
+/* full-width figure */
+.md-typeset img.cs-wide {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* --- product cards --- */
+.md-typeset .grid.cards > ul > li {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+  border-color: var(--md-accent-fg-color);
+}
+.md-typeset .grid.cards > ul > li > p:first-child {
+  margin: 0;
+}
+.md-typeset .grid.cards > ul > li > p:first-child img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.md-typeset .grid.cards > ul > li > h3 {
+  margin: 1rem 1.1rem .3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.md-typeset .grid.cards > ul > li > p:not(:first-child) {
+  padding: 0 1.1rem;
+}
+.md-typeset .grid.cards > ul > li > hr {
+  margin: .9rem 0 .7rem;
+}
+.md-typeset .grid.cards > ul > li > p:last-child {
+  padding-bottom: 1rem;
+  font-size: .78rem;
+}
+
+/* --- screen recordings converted from gif --- */
+.md-typeset video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+  border-radius: 8px;
+}
+
+/* --- youtube embeds keep their aspect ratio --- */
+.md-typeset iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* not-yet-released marker on a product card */
+.cs-badge {
+  display: inline-block;
+  margin-left: .45rem;
+  padding: .08rem .45rem;
+  border-radius: 999px;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  vertical-align: .18em;
+  color: var(--md-default-bg-color);
+  background: var(--md-accent-fg-color);
+}
+
+/* the course callout */
+.cs-feature {
+  padding: 1.6rem 1.6rem 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background:
+    linear-gradient(135deg, rgba(255, 193, 7, .10), transparent 60%),
+    var(--md-code-bg-color);
+}
+.md-typeset .cs-feature h3 {
+  margin-top: 0;
+}
+
+/* the primary button follows the accent, not the blue default */
+.md-typeset .md-button--primary {
+  background-color: var(--md-accent-fg-color);
+  border-color: var(--md-accent-fg-color);
+  color: #1b1b1b;
+}
+
+/* what the course covers */
+.cs-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: .4rem 1.6rem;
+  margin: 1.2rem 0 1.4rem;
+}
+.md-typeset .cs-course-grid dl {
+  margin: 0;
+}
+.md-typeset .cs-course-grid dt {
+  font-weight: 700;
+}
+.md-typeset .cs-course-grid dd {
+  margin: .15rem 0 .9rem;
+  font-size: .76rem;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .cs-feature a > img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
