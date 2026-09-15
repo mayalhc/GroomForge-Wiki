@@ -181,7 +181,7 @@ Blender Geometry Nodes의 특성상 실시간 뷰포트 표시가 실제 내보�
 *엣지 기반 리깅: 커스텀 골격 레이아웃을 위해 Edit Mode에서 선택한 엣지를 기반으로 리그 구조를 자동 생성합니다.
 
 <video width="100%" controls>
-  <source src="./assets/edge_rig.mp4" type="video/mp4">
+  <source src="assets/edge_rig.mp4" type="video/mp4">
 </video>
 
 
@@ -215,7 +215,7 @@ Unreal MetaHuman 헤어 카드 생성기의 느린 생성 속도를 보완하는
  Flow 맵, 그래디언트 그룹, Occlusion 변형과 같은 사전 구성된 데이터로 Unreal의 헤어 셰이더로 원활하게 전환됩니다.
 
 <video width="100%" controls preload="metadata">
-  <source src="./assets/card_re.mp4" type="video/mp4">
+  <source src="assets/card_re.mp4" type="video/mp4">
   브라우저가 video 태그를 지원하지 않습니다.
 </video>
 *컬러 가이드 이미지를 사용하여 수천 개의 헤어 카드 UV를 자동으로 배치하고 정렬합니다.*
@@ -280,12 +280,12 @@ Blender에서 Hair Curves를 Armature에 직접 페어런트하거나 바인딩�
     근접성 기반의 빠른 바인딩으로 빠른 애니메이션에서도 안정적인 결과 보장.
 
 <video width="100%" controls>
-  <source src="./assets/Hair_bind1.mp4" type="video/mp4">
+  <source src="assets/Hair_bind1.mp4" type="video/mp4">
 </video>
 
 
 <video width="100%" controls>
-  <source src="./assets/Hair_bind2.mp4" type="video/mp4">
+  <source src="assets/Hair_bind2.mp4" type="video/mp4">
 </video>
 
 ---
