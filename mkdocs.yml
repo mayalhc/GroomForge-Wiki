@@ -53,6 +53,9 @@ extra:
     - icon: fontawesome/solid/cart-shopping
       link: https://superhivemarket.com/creators/chamiseul
       name: Superhive Market
+  analytics:
+    provider: google
+    property: G-SNSJS19D0M
 
 markdown_extensions:
   - admonition
